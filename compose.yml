@@ -3,7 +3,12 @@ services:
     image: dockurr/windows
     container_name: windows
     environment:
-      VERSION: "11"
+      VERSION: "11l"
+      USERNAME: "Dr-Osama"
+      PASSWORD: "admin@123"
+      RAM_SIZE: "8G"
+      CPU_CORES: "4"
+      DISK_SIZE: "501G"
     devices:
       - /dev/kvm
       - /dev/net/tun
@@ -16,4 +21,4 @@ services:
     volumes:
       - ./windows:/storage
     restart: always
-    stop_grace_period: 2m
+    stop_grace_period: 9m
